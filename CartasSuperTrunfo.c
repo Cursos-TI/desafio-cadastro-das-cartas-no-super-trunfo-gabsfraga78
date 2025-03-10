@@ -1,29 +1,23 @@
 #include <stdio.h>
 
 int main() {
-    char estadoA;
-    char estadoB;
-    char codigoA01[4];
-    char codigoA02[4];
-    char nomeCidade1[50];
-    char nomeCidade2[50];
-    int populacao1;
-    int populacao2;
-    float area1;
-    float area2;
-    float pib1;
-    float pib2;
-    int pontosTuristicos1;
-    int pontosTuristicos2;
+    // Variáveis para armazenar os dados das cartas
+    char estadoA, estadoB;
+    char codigoA01[4], codigoA02[4];
+    char nomeCidade1[50], nomeCidade2[50];
+    int populacao1, populacao2;
+    float area1, area2, pib1, pib2;
+    int pontosTuristicos1, pontosTuristicos2;
 
+    // Entrada de dados da primeira carta
     printf("Digite os dados da primeira carta:\n");
     printf("Estado: ");
     scanf(" %c", &estadoA);
-    while (getchar() != '\n'); // Limpa buffer
+    while (getchar() != '\n');
 
     printf("Codigo: ");
     scanf(" %3s", codigoA01);
-    while (getchar() != '\n'); // Limpa buffer
+    while (getchar() != '\n');
 
     printf("Nome da Cidade: ");
     fgets(nomeCidade1, sizeof(nomeCidade1), stdin);
@@ -39,17 +33,17 @@ int main() {
 
     printf("Pontos Turisticos: ");
     scanf(" %d", &pontosTuristicos1);
+    while (getchar() != '\n');
 
-    while (getchar() != '\n'); // Limpa buffer
-
+    // Entrada de dados da segunda carta
     printf("\nDigite os dados da segunda carta:\n");
     printf("Estado: ");
     scanf(" %c", &estadoB);
-    while (getchar() != '\n'); // Limpa buffer
+    while (getchar() != '\n');
 
     printf("Codigo: ");
     scanf(" %3s", codigoA02);
-    while (getchar() != '\n'); // Limpa buffer
+    while (getchar() != '\n');
 
     printf("Nome da Cidade: ");
     fgets(nomeCidade2, sizeof(nomeCidade2), stdin);
@@ -66,6 +60,7 @@ int main() {
     printf("Pontos Turisticos: ");
     scanf(" %d", &pontosTuristicos2);
 
+    // Mostra os dados da primeira carta
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estadoA);
     printf("Codigo: %s\n", codigoA01);
@@ -75,6 +70,7 @@ int main() {
     printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Pontos Turisticos: %d\n", pontosTuristicos1);
 
+    // Mostra os dados da segunda carta
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estadoB);
     printf("Codigo: %s\n", codigoA02);
